@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOAL 4</title>
+    <style>
+        .form {
+            font-size: 20px;
+            margin-bottom: 50px;
+            padding: 20px 15px;
+        }
+        
+        .btn{
+            font-size: 15px;
+        }
+
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function hitungKeliling() {
+          var a = parseFloat(document.getElementById("sisiA").value);
+          var b = parseFloat(document.getElementById("sisiB").value);
+          var c = parseFloat(document.getElementById("sisiC").value);
+          var d = parseFloat(document.getElementById("sisiD").value);
+        
+          if (isNaN(a) || isNaN(b) || isNaN(c) || isNaN(d)) {
+            alert("Masukkan panjang sisi dengan angka yang valid");
+          } else {
+            var keliling = a + b + c + d;
+            document.getElementById("hasilKeliling").innerHTML = "Keliling trapesium sama kaki: " + keliling;
+          }
+        }
+        </script>
+        </head>
+        <body>
+        
+        <h2>Kalkulator Keliling Trapesium Sama Kaki</h2>
+        
+        <form class="form">
+          Panjang Sisi a: <input type="text" id="sisiA">
+          <br>
+          <br>
+          Panjang Sisi b: <input type="text" id="sisiB">
+          <br>
+          <br>
+          Panjang Sisi c: <input type="text" id="sisiC">
+          <br>
+          <br>
+          Panjang Sisi d: <input type="text" id="sisiD">
+          <br>
+          <br>
+          <input type="button" value="Hitung Keliling" onclick="hitungKeliling()" class="btn">
+        </form>
+        
+        <p id="hasilKeliling"></p>
+</body>
+</html>
